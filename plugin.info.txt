@@ -1,0 +1,8 @@
+# General Plugin Info do not edit
+
+base   eclipseupdateurl
+author i-net software
+email  tools@inetsoftware.de
+date   2009-03-16
+name   eclipseUpdate Plugin
+desc   Show details about an Eclipse Update URL
