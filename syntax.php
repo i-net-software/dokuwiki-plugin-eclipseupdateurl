@@ -23,7 +23,7 @@ class syntax_plugin_eclipseupdateurl extends DokuWiki_Syntax_Plugin {
         $this->Lexer->addSpecialPattern("\[\[eclipseUpdate>.*?\]\]", $mode, 'plugin_eclipseupdateurl');
     }
 
-    function handle($match, $state, $pos, &$handler) {
+    function handle($match, $state, $pos, Doku_Handler $handler) {
 
 		$ID = substr($match, 16, -2);
 		list( $ID, $opts) = explode( '|', $ID, 2 );
@@ -57,7 +57,7 @@ class syntax_plugin_eclipseupdateurl extends DokuWiki_Syntax_Plugin {
 		return array( $ID, $fOpts );
     }            
 	
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
 	
 		list ( $data, $opts ) = $data;
 		if ( $mode == 'xhtml' ) {
